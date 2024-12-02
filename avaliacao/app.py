@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 app = Flask(__name__)
 app.secret_key = 'seu_segredo_aqui'  # Necessário para flash messages
 
-@app.route('/')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template('login.html')
 
