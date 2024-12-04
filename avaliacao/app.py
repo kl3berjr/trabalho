@@ -13,7 +13,7 @@ def cadastro():
         senha = request.form['senha']
         confirmar_senha = request.form['confirmar_senha']
         if senha != confirmar_senha:
-            flash('As senhas não coincidem!', 'error')
+            flash('As senhas estão erradas, pamonha!', 'error')
             return redirect(url_for('cadastro'))
         flash('Cadastro realizado com sucesso!', 'success')
         return redirect(url_for('login'))
